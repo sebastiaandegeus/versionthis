@@ -2,7 +2,7 @@
 /*
 Plugin Name: Version This
 Plugin URI: http://wordpress.org/plugins/versionthis/
-Description: This plugin make it possible to automaticallly version a javascript or css file from your theme or plugin when that file changes content.
+Description: This WordPress plugin make it possible to automaticallly version a javascript or css file from your theme or plugin when that file changes content.
 Author: Sebastiaan de Geus
 Version: 1.0.0
 */
