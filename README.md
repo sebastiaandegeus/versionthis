@@ -1,7 +1,7 @@
 Version This
 ============
 
-This WordPress plugin automatically versions your enqueued javascript and css assets by adding a md5 hash of the file content as a query string param.
+This WordPress plugin automatically versions your enqueued javascript and css files with a md5 hash to the querystring based on the file content.
 
 
 ## How it works
