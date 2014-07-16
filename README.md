@@ -15,23 +15,25 @@ When a file changes the md5 hash changed and so the new hash gets added to the q
 
 This plugin provided a function `version_this()` that can be used in your plugin or theme to tell Version This to start versioning that file or group of files.
 
-Some examples:
+### Examples
 
+This will version all `js` and `css` files that are enqueued and that contain `my_awesome_theme` in the URL of the file:
 ```
 version_this('my_awesome_theme');
 ```
-This will version all `js` and `css` files that are enqueued and that contain `my_awesome_theme` in the URL of the file.
 
 
+This will version all 'js' files named 'cool.js':
 ```
 version_this('cool.js');
 ```
-This will version all 'js' files named 'cool.js'.
 
+
+This will version a very specific file that contains the URL path `/my_plugin/assets/style.css`:
 ```
 version_this('/my_plugin/assets/style.css');
 ```
-This will version a very specific file that contains the URL path `/my_plugin/assets/style.css`.
+
 
 ## Fatal Error when plugin not activated
 
