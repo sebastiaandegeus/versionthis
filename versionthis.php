@@ -24,17 +24,24 @@ class Version_This {
   }
 
   public static function filters() {
-    add_filter( 'style_loader_src', array( 'Version_This', 'style_loader_src_filter' ) );
+    add_filter( 'style_loader_src', array( 'Version_This', 'loader_src_filter' ) );
+    add_filter( 'script_loader_src', array( 'Version_This', 'loader_src_filter' ) );
   }
 
-  public static function style_loader_src_filter( $src ) {
+  public static function loader_src_filter( $src ) {
     if ( ! Version_This::versioned( $src ) ) return $src;
 
     $parts = parse_url( $src );
 
-    $parts['query']  = '?ver=' . md5_file( untrailingslashit( ABSPATH ) . $parts['path'] );
+    if ( defined( 'BEDROCK' ) ) {
+      $file = untrailingslashit( str_replace('wp/', '', ABSPATH)) . $parts['path'];
+    } else {
+      $file = untrailingslashit( ABSPATH ) . $parts['path'];
+    }
+
+    $parts['query']  = '?ver=' . md5_file( $file );
     $parts['scheme'] = $parts['scheme'] . '://';
-    $parts['port']   = ':' . $parts['port'];
+    $parts['port']   = ! empty( $parts['port'] ) ? ':' . $parts['port'] : '';
 
     return implode( $parts );
   }
