@@ -48,4 +48,10 @@ if ( function_exists( 'version_this' ) ) {
 }
 ```
 
+## Bedrock
 
+When the project has been setup as a Bedrock project WordPress is in a subdirectory called `/web/wp`. This causes conflicts. To solve this add this to your `wp-config.php` or `application.php`. The plugin will check for this constant to fix the pathing issues automatically.
+
+```
+define( 'BEDROCK', true );
+```
