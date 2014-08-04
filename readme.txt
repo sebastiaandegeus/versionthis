@@ -8,7 +8,7 @@ Requires at least: 3.9.0
 Tested up to: 3.9.0
 Stable tag: trunk
 Homepage: https://github.com/sebastiaandegeus/versionthis
-Version: 1.0.0
+Version: 1.1.1
 License: GPLv2 or later
 
 Copyright (C) 2014 Sebastiaan de Geus
@@ -41,3 +41,8 @@ Install this as a normal WordPress plugin or move it into the mu-plugins directo
 
 = 1.0.0 =
 * First public release
+
+= 1.1.1 =
+* Added javascript support
+* Updated readmes
+* Added Bedrock folder structure support
