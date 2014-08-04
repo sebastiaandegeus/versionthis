@@ -8,7 +8,7 @@ Requires at least: 3.9.0
 Tested up to: 3.9.0
 Stable tag: trunk
 Homepage: https://github.com/sebastiaandegeus/versionthis
-Version: 1.0.0
+Version: 1.1.0
 License: GPLv2 or later
 
 Copyright (C) 2014 Sebastiaan de Geus
